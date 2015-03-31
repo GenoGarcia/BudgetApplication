@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+    android:id="@+id/widget0"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/widget32"
+        android:layout_width="232dp"
+        android:layout_height="30dp"
+        android:text="Please Enter Paycheck Amount $"
+        android:textSize="15sp"
+        android:layout_x="2dp"
+        android:layout_y="9dp" />
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="148dp"
+        android:layout_height="34dp"
+        android:textSize="18sp"
+        android:layout_x="224dp"
+        android:layout_y="5dp"
+        android:clickable="true"
+        android:editable="true"
+        android:enabled="true"
+        android:focusable="true" />
+    <Button
+        android:id="@+id/budgetButton"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:text="Budget"
+        android:layout_x="76dp"
+        android:layout_y="45dp"
+        android:clickable="true" />
+
+    <ListView
+        android:id="@+id/foodBudget"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_x="10dp"
+        android:layout_y="111dp" />
+    <ListView
+        android:id="@+id/shelterBudget"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_x="10dp"
+        android:layout_y="154dp" />
+    <ListView
+        android:id="@+id/utilitiesBudget"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_x="10dp"
+        android:layout_y="198dp" />
+    <ListView
+        android:id="@+id/clothingBudget"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_x="10dp"
+        android:layout_y="241dp" />
+    <ListView
+        android:id="@+id/transportationBudget"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_x="10dp"
+        android:layout_y="285dp" />
+    <ListView
+        android:id="@+id/medicalBudget"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_x="10dp"
+        android:layout_y="329dp" />
+    <ListView
+        android:id="@+id/personalBudget"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_x="10dp"
+        android:layout_y="376dp" />
+    <ListView
+        android:id="@+id/savingsBudget"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_x="10dp"
+        android:layout_y="422dp" />
+
+</AbsoluteLayout>
