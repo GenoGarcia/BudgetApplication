@@ -2,17 +2,14 @@ package com.example.geno.budgetapplication;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
+
 import java.util.ArrayList;
 
 
@@ -57,15 +54,15 @@ public class MainActivity extends ActionBarActivity {
                         update ListView ();
                     }
                 });
-        public void update ListView() {
+        public void update MainActivity() {
         ArrayList<String> list = new ArrayList<>();
-        double amount = Double.parseDouble(payment.getText());
-        list.add("Food Budget $ " + (amount*.25));
+        double amount = Double.parseDouble(amount.getText());
+        list.add("Food Budget $ " + (amount*.15));
         list.add("Shelter Budget $ " + (amount*.25));
-        list.add("Utilities Budget $ " + (amount*.25));
-        list.add("Clothing Budget $ " + (amount*.25));
-        list.add("Transportation Budget $ " + (amount*.25));
-        list.add("Medical Budget $ " + (amount*.25));
+        list.add("Utilities Budget $ " + (amount*.15));
+        list.add("Clothing Budget $ " + (amount*.10));
+        list.add("Transportation Budget $ " + (amount*.15));
+        list.add("Medical Budget $ " + (amount*.10));
         list.add("Personal Budget $ " + (amount*.7));
         list.add("Savings Budget $ " + (amount*.3));
         ArrayAdapter adapt = new ArrayAdapter (getBaseContext, list());
