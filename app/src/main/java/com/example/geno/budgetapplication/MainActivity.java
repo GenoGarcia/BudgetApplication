@@ -37,15 +37,38 @@ public class MainActivity extends ActionBarActivity {
     Button budgetButton;
     TextView amount;
 
-    /** Get Value from TextView (amount) Field */
+    /**
+     *
+     *
+     * Get Value from TextView (amount) Field
+     *
+     *
+     * */
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        budgetButton = (Button)findViewById(R.id.budgetButton);
         amount = (TextView) findViewById(R.id.amount);
+
+        /**
+         *
+         *
+         * Adding budget button with functionality
+         *
+         *
+         * */
+
+        budgetButton = (Button)findViewById(R.id.budgetButton);
+        final ListView foodBudget = (ListView) findViewById(R.id.foodBudget);
+        final ListView shelterBudget = (ListView) findViewById(R.id.shelterBudget);
+        final ListView utilitiesBudget = (ListView) findViewById(R.id.utilitiesBudget);
+        final ListView clothingBudget = (ListView) findViewById(R.id.clothingBudget);
+        final ListView transportationBudget = (ListView) findViewById(R.id.transportationBudget);
+        final ListView medicalBudget = (ListView) findViewById(R.id.medicalBudget);
+        final ListView personalBudget = (ListView) findViewById(R.id.personalBudget);
+        final ListView savingsBudget = (ListView) findViewById(R.id.savingsBudget);
 
         budgetButton.setOnClickListener(
                 new View.OnClickListener() {
@@ -54,6 +77,7 @@ public class MainActivity extends ActionBarActivity {
                         update ListView ();
                     }
                 });
+
         public void update MainActivity() {
         ArrayList<String> list = new ArrayList<>();
         double amount = Double.parseDouble(amount.getText());
@@ -70,10 +94,15 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    public class ListActivity extends MainActivity {
+/**
+ *
+ *
+ * Adding user input from TextView (amount) into List View
+ *
+ *
+ * */
 
-        /** Adding user input from TextView (amount) into List View */
-
+     public class ListActivity extends MainActivity {
         private ListView foodBudget;
         private ListView shelterBudget;
         private ListView utilitiesBudget;
