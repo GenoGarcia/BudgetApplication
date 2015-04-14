@@ -81,4 +81,20 @@
         android:layout_x="10dp"
         android:layout_y="422dp" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="355dp"
+        android:layout_height="215dp"
+        android:text="        Food Budget = 15%
+        Shelter Budget = 25%
+        Utilities Budget = 15%
+        Clothing Budget = 10%
+        Transportation Budget = 15%
+        Medical Budget = 10%
+        Personal Budget = 7%
+        Savings Budget = 3%"
+        android:textSize="20sp"
+        android:layout_x="13dp"
+        android:layout_y="468dp" />
+
 </AbsoluteLayout>

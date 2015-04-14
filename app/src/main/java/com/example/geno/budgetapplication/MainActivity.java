@@ -34,6 +34,7 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     Button budgetButton;
     TextView amount;
 
@@ -46,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
      * */
 
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -70,15 +71,28 @@ public class MainActivity extends ActionBarActivity {
         final ListView personalBudget = (ListView) findViewById(R.id.personalBudget);
         final ListView savingsBudget = (ListView) findViewById(R.id.savingsBudget);
 
-        budgetButton.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick() {
-                        update ListView ();
-                    }
-                });
+        /**
+         *
+         *
+         * Output List
+         *
+         *
+         * */
 
-        public void update MainActivity() {
+         public outputList {
+            final
+
+            budgetButton.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick() {
+                            updateListView();
+                        }
+                    });
+
+        }
+
+        public void updateMainActivity() {
         ArrayList<String> list = new ArrayList<>();
         double amount = Double.parseDouble(amount.getText());
         list.add("Food Budget $ " + (amount*.15));
@@ -89,7 +103,7 @@ public class MainActivity extends ActionBarActivity {
         list.add("Medical Budget $ " + (amount*.10));
         list.add("Personal Budget $ " + (amount*.7));
         list.add("Savings Budget $ " + (amount*.3));
-        ArrayAdapter adapt = new ArrayAdapter (getBaseContext, list());
+        ArrayAdapter adapt = new ArrayAdapter (getBaseContext, list);
         outputList.setAdapter(adapt);
         }
     }
