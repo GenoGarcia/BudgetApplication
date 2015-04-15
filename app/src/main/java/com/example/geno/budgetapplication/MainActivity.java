@@ -1,88 +1,73 @@
 package com.example.geno.budgetapplication;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 
 public class MainActivity extends ActionBarActivity {
+//-----------------------------------------------------
+//
+//		Fields
+//
+//-----------------------------------------------------
+	protected Button budgetButton;
+	protected TextView amount;
+	protected ListView foodBudget;
+	protected ListView shelterBudget;
+	protected ListView utilitiesBudget;
+	protected ListView clothingBudget;
+	protected ListView transportationBudget;
+	protected ListView medicalBudget;
+	protected ListView personalBudget;
+	protected ListView savingsBudget;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+//-----------------------------------------------------
+//
+//		onCreate et al
+//
+//-----------------------------------------------------
+	@Override //Main
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+		initializeElements();
 
-    Button budgetButton;
-    TextView amount;
+	}
 
-    /**
-     *
-     *
-     * Get Value from TextView (amount) Field
-     *
-     *
-     * */
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+//-----------------------------------------------------
+//
+//		GUI
+//
+//-----------------------------------------------------
+	//Match the fields to the GUI elements and give the elements any default values
+	public void initializeElements() {
+		budgetButton = (Button)findViewById(R.id.budgetButton);
+		amount = (TextView) findViewById(R.id.amount);
+		foodBudget = (ListView) findViewById(R.id.foodBudget);
+		shelterBudget = (ListView) findViewById(R.id.shelterBudget);
+		utilitiesBudget = (ListView) findViewById(R.id.utilitiesBudget);
+		clothingBudget = (ListView) findViewById(R.id.clothingBudget);
+		transportationBudget = (ListView) findViewById(R.id.transportationBudget);
+		medicalBudget = (ListView) findViewById(R.id.medicalBudget);
+		personalBudget = (ListView) findViewById(R.id.personalBudget);
+		savingsBudget = (ListView) findViewById(R.id.savingsBudget);
+	}
 
-        amount = (TextView) findViewById(R.id.amount);
 
-        /**
-         *
-         *
-         * Adding budget button with functionality
-         *
-         *
-         * */
+//-----------------------------------------------------
+//
+//		Logic
+//
+//-----------------------------------------------------
 
-        budgetButton = (Button)findViewById(R.id.budgetButton);
-        final ListView foodBudget = (ListView) findViewById(R.id.foodBudget);
-        final ListView shelterBudget = (ListView) findViewById(R.id.shelterBudget);
-        final ListView utilitiesBudget = (ListView) findViewById(R.id.utilitiesBudget);
-        final ListView clothingBudget = (ListView) findViewById(R.id.clothingBudget);
-        final ListView transportationBudget = (ListView) findViewById(R.id.transportationBudget);
-        final ListView medicalBudget = (ListView) findViewById(R.id.medicalBudget);
-        final ListView personalBudget = (ListView) findViewById(R.id.personalBudget);
-        final ListView savingsBudget = (ListView) findViewById(R.id.savingsBudget);
-
-        /**
-         *
-         *
-         * Output List
-         *
-         *
-         * */
-
-         public outputList {
-            final
-
-            budgetButton.setOnClickListener(
+		/*
+         public outputList() {
+            final budgetButton.setOnClickListener(
                     new View.OnClickListener() {
                         @Override
                         public void onClick() {
@@ -105,40 +90,7 @@ public class MainActivity extends ActionBarActivity {
         list.add("Savings Budget $ " + (amount*.3));
         ArrayAdapter adapt = new ArrayAdapter (getBaseContext, list);
         outputList.setAdapter(adapt);
-        }
-    }
+        }*/
 
-/**
- *
- *
- * Adding user input from TextView (amount) into List View
- *
- *
- * */
 
-     public class ListActivity extends MainActivity {
-        private ListView foodBudget;
-        private ListView shelterBudget;
-        private ListView utilitiesBudget;
-        private ListView clothingBudget;
-        private ListView transportationBudget;
-        private ListView medicalBudget;
-        private ListView personalBudget;
-        private ListView savingsBudget;
-
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-
-            foodBudget = (ListView) findViewById(R.id.foodBudget);
-            shelterBudget = (ListView) findViewById(R.id.shelterBudget);
-            utilitiesBudget = (ListView) findViewById(R.id.utilitiesBudget);
-            clothingBudget = (ListView) findViewById(R.id.clothingBudget);
-            transportationBudget = (ListView) findViewById(R.id.transportationBudget);
-            medicalBudget = (ListView) findViewById(R.id.medicalBudget);
-            personalBudget = (ListView) findViewById(R.id.personalBudget);
-            savingsBudget = (ListView) findViewById(R.id.savingsBudget);
-        }
-    }
-}
+} //End Class

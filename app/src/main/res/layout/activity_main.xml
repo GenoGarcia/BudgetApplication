@@ -35,51 +35,9 @@
     <ListView
         android:id="@+id/foodBudget"
         android:layout_width="360dp"
-        android:layout_height="40dp"
+        android:layout_height="186dp"
         android:layout_x="10dp"
         android:layout_y="111dp" />
-    <ListView
-        android:id="@+id/shelterBudget"
-        android:layout_width="360dp"
-        android:layout_height="40dp"
-        android:layout_x="10dp"
-        android:layout_y="154dp" />
-    <ListView
-        android:id="@+id/utilitiesBudget"
-        android:layout_width="360dp"
-        android:layout_height="40dp"
-        android:layout_x="10dp"
-        android:layout_y="198dp" />
-    <ListView
-        android:id="@+id/clothingBudget"
-        android:layout_width="360dp"
-        android:layout_height="40dp"
-        android:layout_x="10dp"
-        android:layout_y="241dp" />
-    <ListView
-        android:id="@+id/transportationBudget"
-        android:layout_width="360dp"
-        android:layout_height="40dp"
-        android:layout_x="10dp"
-        android:layout_y="285dp" />
-    <ListView
-        android:id="@+id/medicalBudget"
-        android:layout_width="360dp"
-        android:layout_height="40dp"
-        android:layout_x="10dp"
-        android:layout_y="329dp" />
-    <ListView
-        android:id="@+id/personalBudget"
-        android:layout_width="360dp"
-        android:layout_height="40dp"
-        android:layout_x="10dp"
-        android:layout_y="376dp" />
-    <ListView
-        android:id="@+id/savingsBudget"
-        android:layout_width="360dp"
-        android:layout_height="40dp"
-        android:layout_x="10dp"
-        android:layout_y="422dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -94,7 +52,7 @@
         Personal Budget = 7%
         Savings Budget = 3%"
         android:textSize="20sp"
-        android:layout_x="13dp"
-        android:layout_y="468dp" />
+        android:layout_x="15dp"
+        android:layout_y="299dp" />
 
 </AbsoluteLayout>
