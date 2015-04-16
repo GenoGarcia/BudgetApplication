@@ -1,10 +1,14 @@
 package com.example.geno.budgetapplication;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -15,14 +19,14 @@ public class MainActivity extends ActionBarActivity {
 //-----------------------------------------------------
 	protected Button budgetButton;
 	protected TextView amount;
-	protected ListView foodBudget;
-	protected ListView shelterBudget;
-	protected ListView utilitiesBudget;
-	protected ListView clothingBudget;
-	protected ListView transportationBudget;
-	protected ListView medicalBudget;
-	protected ListView personalBudget;
-	protected ListView savingsBudget;
+	protected TextView foodBudget;
+	protected TextView shelterBudget;
+	protected TextView utilitiesBudget;
+	protected TextView clothingBudget;
+	protected TextView transportationBudget;
+	protected TextView medicalBudget;
+	protected TextView personalBudget;
+	protected TextView savingsBudget;
 
 //-----------------------------------------------------
 //
@@ -38,7 +42,6 @@ public class MainActivity extends ActionBarActivity {
 
 	}
 
-
 //-----------------------------------------------------
 //
 //		GUI
@@ -48,16 +51,15 @@ public class MainActivity extends ActionBarActivity {
 	public void initializeElements() {
 		budgetButton = (Button)findViewById(R.id.budgetButton);
 		amount = (TextView) findViewById(R.id.amount);
-		foodBudget = (ListView) findViewById(R.id.foodBudget);
-		shelterBudget = (ListView) findViewById(R.id.shelterBudget);
-		utilitiesBudget = (ListView) findViewById(R.id.utilitiesBudget);
-		clothingBudget = (ListView) findViewById(R.id.clothingBudget);
-		transportationBudget = (ListView) findViewById(R.id.transportationBudget);
-		medicalBudget = (ListView) findViewById(R.id.medicalBudget);
-		personalBudget = (ListView) findViewById(R.id.personalBudget);
-		savingsBudget = (ListView) findViewById(R.id.savingsBudget);
+		foodBudget = (TextView) findViewById(R.id.foodBudget);
+		shelterBudget = (TextView) findViewById(R.id.shelterBudget);
+		utilitiesBudget = (TextView) findViewById(R.id.utilitiesBudget);
+		clothingBudget = (TextView) findViewById(R.id.clothingBudget);
+		transportationBudget = (TextView) findViewById(R.id.transportationBudget);
+		medicalBudget = (TextView) findViewById(R.id.medicalBudget);
+		personalBudget = (TextView) findViewById(R.id.personalBudget);
+		savingsBudget = (TextView) findViewById(R.id.savingsBudget);
 	}
-
 
 //-----------------------------------------------------
 //
@@ -65,32 +67,33 @@ public class MainActivity extends ActionBarActivity {
 //
 //-----------------------------------------------------
 
-		/*
-         public outputList() {
-            final budgetButton.setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick() {
-                            updateListView();
-                        }
-                    });
+	public void addActionHandlers() {
+        budgetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!amount.getText().toString().equals("")) {
+                    SharedPreferences prefs = getBaseContext().getSharedPreferences(
+                            "Prefs", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor sharedPref = prefs.edit();
 
-        }
+                    sharedPref.putFloat("Payment", Float.parseFloat(amount.getText().toString()));
+                    sharedPref.putFloat("Food", Float.parseFloat(foodBudget.getText().toString()));
+                    sharedPref.putFloat("Shelter", Float.parseFloat(shelterBudget.getText().toString()));
+                    sharedPref.putFloat("Utilities", Float.parseFloat(utilitiesBudget.getText().toString()));
+                    sharedPref.putFloat("Clothing", Float.parseFloat(clothingBudget.getText().toString()));
+                    sharedPref.putFloat("Transportation", Float.parseFloat(transportationBudget.getText().toString()));
+                    sharedPref.putFloat("Medical", Float.parseFloat(medicalBudget.getText().toString()));
+                    sharedPref.putFloat("Personal", Float.parseFloat(personalBudget.getText().toString()));
+                    sharedPref.putFloat("Savings", Float.parseFloat(savingsBudget.getText().toString()));
+                    sharedPref.commit();
 
-        public void updateMainActivity() {
-        ArrayList<String> list = new ArrayList<>();
-        double amount = Double.parseDouble(amount.getText());
-        list.add("Food Budget $ " + (amount*.15));
-        list.add("Shelter Budget $ " + (amount*.25));
-        list.add("Utilities Budget $ " + (amount*.15));
-        list.add("Clothing Budget $ " + (amount*.10));
-        list.add("Transportation Budget $ " + (amount*.15));
-        list.add("Medical Budget $ " + (amount*.10));
-        list.add("Personal Budget $ " + (amount*.7));
-        list.add("Savings Budget $ " + (amount*.3));
-        ArrayAdapter adapt = new ArrayAdapter (getBaseContext, list);
-        outputList.setAdapter(adapt);
-        }*/
+                    //Start next activity with an intent
 
-
+                }else{
+                    Toast toast = Toast.makeText(getBaseContext(), "Please Enter Payment Amount", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            }
+        });
+    }
 } //End Class
