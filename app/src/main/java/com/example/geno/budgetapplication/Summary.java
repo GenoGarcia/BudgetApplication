@@ -2,11 +2,8 @@ package com.example.geno.budgetapplication;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
 
 
@@ -33,25 +30,48 @@ public class Summary extends ActionBarActivity {
         medical = (TextView) findViewById(R.id.medical);
         personal = (TextView) findViewById(R.id.personal);
         savings = (TextView) findViewById(R.id.savings);
+		extra = (TextView) findViewById(R.id.extra);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_summary);
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_summary);
 
-        initializeElements();
-        SharedPreferences sharedPref = getBaseContext().getSharedPreferences("Prefs", Context.MODE_PRIVATE);
+		initializeElements();
+		SharedPreferences sharedPref = getBaseContext().getSharedPreferences("Prefs", Context.MODE_PRIVATE);
 
-        total.setText("Paycheck Amount: " + sharedPref.getFloat("Payment", 0));
-        food.setText("Food: " + sharedPref.getFloat("Food", 0));
-        shelter.setText("Shelter: " + sharedPref.getFloat("Shelter", 0));
-        utilities.setText("Utilities: " + sharedPref.getFloat("Utilities", 0));
-        clothing.setText("Clothing: " + sharedPref.getFloat("Clothing", 0));
-        transportation.setText("Transportation: " + sharedPref.getFloat("Transportation", 0));
-        medical.setText("Medical: " + sharedPref.getFloat("Medical", 0));
-        personal.setText("Personal: " + sharedPref.getFloat("Personal", 0));
-        savings.setText("Savings: " + sharedPref.getFloat("Savings", 0));
-        extra.setText("Extra: " + sharedPref.getFloat("Extra", 0));
-    }
-}
+		float totalValue = sharedPref.getFloat("Payment", 0);
+		float foodValue = sharedPref.getFloat("Food", 0);
+		float shelterValue = sharedPref.getFloat("Shelter", 0);
+		float utilitiesValue = sharedPref.getFloat("Utilities", 0);
+		float clothingValue = sharedPref.getFloat("Clothing", 0);
+		float transportationValue = sharedPref.getFloat("Transportation", 0);
+		float medicalValue = sharedPref.getFloat("Medical", 0);
+		float personalValue = sharedPref.getFloat("Personal", 0);
+		float savingsValue = sharedPref.getFloat("Savings", 0);
+		float extraValue = totalValue - (foodValue + shelterValue + utilitiesValue + clothingValue +
+				transportationValue + medicalValue + personalValue + savingsValue);
+
+		String foodString = "$" + foodValue + " %" + ((int) (foodValue / totalValue * 100));
+		String shelterString = "$" + shelterValue + " %" + ((int) (shelterValue / totalValue * 100));
+		String utilitiesString = "$" + utilitiesValue + " %" + ((int) (utilitiesValue / totalValue * 100));
+		String clothingString = "$" + clothingValue + " %" + ((int) (clothingValue / totalValue * 100));
+		String transportationString = "$" + transportationValue + " %" + ((int) (transportationValue / totalValue * 100));
+		String medicalString = "$" + medicalValue + " %" + ((int) (medicalValue / totalValue * 100));
+		String personalString = "$" + personalValue + " %" + ((int) (personalValue / totalValue * 100));
+		String savingsString = "$" + savingsValue + " %" + ((int) (savingsValue / totalValue * 100));
+		String extraString = "$" + extraValue + " %" + ((int) (extraValue / totalValue * 100));
+
+		total.setText("Paycheck Amount: $" + totalValue);
+		food.setText("Food: " + foodString);
+		shelter.setText("Shelter: " + shelterString);
+		utilities.setText("Utilities: " + utilitiesString);
+		clothing.setText("Clothing: " + clothingString);
+		transportation.setText("Transportation: " + transportationString);
+		medical.setText("Medical: " + medicalString);
+		personal.setText("Personal: " + personalString);
+		savings.setText("Savings: " + savingsString);
+		extra.setText("Extra: " + extraString);
+ 	}
+} //End Class
