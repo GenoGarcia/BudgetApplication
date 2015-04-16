@@ -6,7 +6,174 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.geno.budgetapplication.Summary">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true">
 
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/total"
+                android:layout_column="0"
+                android:singleLine="true"
+                android:layout_gravity="center_vertical"
+                android:text="Paycheck Total"
+                android:gravity="center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/food"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:text="Food"
+                android:gravity="center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/shelter"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:text="Shelter"
+                android:gravity="center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/utilities"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:text="Utilities"
+                android:gravity="center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/clothing"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:text="Clothing"
+                android:gravity="center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/transportation"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:text="Transportation"
+                android:gravity="center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/medical"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:text="Medical"
+                android:gravity="center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/personal"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:text="Personal"
+                android:gravity="center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/savings"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:text="Savings"
+                android:gravity="center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Extra"
+                android:id="@+id/extra"
+                android:layout_column="0"
+                android:gravity="center_vertical" />
+        </TableRow>
+    </TableLayout>
 </RelativeLayout>
