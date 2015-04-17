@@ -12,11 +12,9 @@ import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
-//-----------------------------------------------------
-//
-//		Fields
-//
-//-----------------------------------------------------
+
+/*		Fields      */
+
 	protected Button budgetButton;
 	protected TextView amount;
 	protected TextView foodBudget;
@@ -28,11 +26,8 @@ public class MainActivity extends ActionBarActivity {
 	protected TextView personalBudget;
 	protected TextView savingsBudget;
 
-//-----------------------------------------------------
-//
-//		onCreate et al
-//
-//-----------------------------------------------------
+/*		onCreate et al      */
+
 	@Override //Main
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -43,12 +38,8 @@ public class MainActivity extends ActionBarActivity {
 
 	}
 
-//-----------------------------------------------------
-//
-//		GUI
-//
-//-----------------------------------------------------
-	//Match the fields to the GUI elements and give the elements any default values
+/*		GUI     */
+
 	public void initializeElements() {
 		budgetButton = (Button)findViewById(R.id.budgetButton);
 		amount = (TextView) findViewById(R.id.amount);
@@ -62,11 +53,7 @@ public class MainActivity extends ActionBarActivity {
 		savingsBudget = (TextView) findViewById(R.id.savingsBudget);
 	}
 
-//-----------------------------------------------------
-//
-//		Logic
-//
-//-----------------------------------------------------
+/*		Logic       */
 
 	public void addActionHandlers() {
         budgetButton.setOnClickListener(new View.OnClickListener() {
