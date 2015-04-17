@@ -53,15 +53,15 @@ public class Summary extends ActionBarActivity {
 		float extraValue = totalValue - (foodValue + shelterValue + utilitiesValue + clothingValue +
 				transportationValue + medicalValue + personalValue + savingsValue);
 
-		String foodString = "$" + foodValue + " %" + ((int) (foodValue / totalValue * 100));
-		String shelterString = "$" + shelterValue + " %" + ((int) (shelterValue / totalValue * 100));
-		String utilitiesString = "$" + utilitiesValue + " %" + ((int) (utilitiesValue / totalValue * 100));
-		String clothingString = "$" + clothingValue + " %" + ((int) (clothingValue / totalValue * 100));
-		String transportationString = "$" + transportationValue + " %" + ((int) (transportationValue / totalValue * 100));
-		String medicalString = "$" + medicalValue + " %" + ((int) (medicalValue / totalValue * 100));
-		String personalString = "$" + personalValue + " %" + ((int) (personalValue / totalValue * 100));
-		String savingsString = "$" + savingsValue + " %" + ((int) (savingsValue / totalValue * 100));
-		String extraString = "$" + extraValue + " %" + ((int) (extraValue / totalValue * 100));
+		String foodString =             "$" + foodValue + "                          %" + ((int) (foodValue / totalValue * 100));
+		String shelterString =          "$" + shelterValue + "                      %" + ((int) (shelterValue / totalValue * 100));
+		String utilitiesString =        "$" + utilitiesValue + "                     %" + ((int) (utilitiesValue / totalValue * 100));
+		String clothingString =         "$" + clothingValue + "                      %" + ((int) (clothingValue / totalValue * 100));
+		String transportationString =   "$" + transportationValue + "          %" + ((int) (transportationValue / totalValue * 100));
+		String medicalString =          "$" + medicalValue + "                       %" + ((int) (medicalValue / totalValue * 100));
+		String personalString =         "$" + personalValue + "                      %" + ((int) (personalValue / totalValue * 100));
+		String savingsString =          "$" + savingsValue + "                        %" + ((int) (savingsValue / totalValue * 100));
+		String extraString =            "$" + extraValue + "                          %" + ((int) (extraValue / totalValue * 100));
 
 		total.setText("Paycheck Amount: $" + totalValue);
 		food.setText("Food: " + foodString);

@@ -73,6 +73,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 if (!amount.getText().toString().equals("")) {
+
                     SharedPreferences prefs = getBaseContext().getSharedPreferences(
                             "Prefs", Context.MODE_PRIVATE);
                     SharedPreferences.Editor sharedPref = prefs.edit();
