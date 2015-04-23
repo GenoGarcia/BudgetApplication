@@ -31,7 +31,8 @@
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/amount"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:gravity="center_horizontal" />
         </TableRow>
 
         <TableRow
@@ -58,7 +59,8 @@
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/foodBudget"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:gravity="center_horizontal" />
         </TableRow>
 
         <TableRow
@@ -85,7 +87,8 @@
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/shelterBudget"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:gravity="center_horizontal" />
         </TableRow>
 
         <TableRow
@@ -112,7 +115,8 @@
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/utilitiesBudget"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:gravity="center_horizontal" />
         </TableRow>
 
         <TableRow
@@ -139,7 +143,8 @@
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/clothingBudget"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:gravity="center_horizontal" />
         </TableRow>
 
         <TableRow
@@ -166,7 +171,8 @@
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/transportationBudget"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:gravity="center_horizontal" />
         </TableRow>
 
         <TableRow
@@ -193,7 +199,8 @@
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/medicalBudget"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:gravity="center_horizontal" />
         </TableRow>
 
         <TableRow
@@ -220,7 +227,8 @@
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/personalBudget"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:gravity="center_horizontal" />
         </TableRow>
 
         <TableRow
@@ -247,7 +255,8 @@
                 android:inputType="numberDecimal"
                 android:ems="10"
                 android:id="@+id/savingsBudget"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:gravity="center_horizontal" />
         </TableRow>
 
         <TableRow
