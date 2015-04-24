@@ -1,4 +1,4 @@
-package com.example.geno.budgetapplication;
+/* package com.example.geno.budgetapplication;
 
 import java.util.Locale;
 
@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 public class TabbedSummary extends ActionBarActivity {
 
-    /**
+    /*
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
      * {@link FragmentPagerAdapter} derivative, which will keep every
@@ -29,12 +29,12 @@ public class TabbedSummary extends ActionBarActivity {
      * may be best to switch to a
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
-    SectionsPagerAdapter mSectionsPagerAdapter;
+   /* SectionsPagerAdapter mSectionsPagerAdapter;
 
     /**
      * The {@link ViewPager} that will host the section contents.
      */
-    ViewPager mViewPager;
+   /* ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +80,7 @@ public class TabbedSummary extends ActionBarActivity {
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+   /* public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -120,7 +120,7 @@ public class TabbedSummary extends ActionBarActivity {
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+  /*  public static class PlaceholderFragment extends Fragment {
         public static final String ARG_OBJECT = "object";
 
         private static final String ARG_SECTION_NUMBER = "section_number";
@@ -130,7 +130,7 @@ public class TabbedSummary extends ActionBarActivity {
          * number.
          */
 
-        public static PlaceholderFragment newInstance(int sectionNumber) {
+       /* public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
@@ -150,4 +150,4 @@ public class TabbedSummary extends ActionBarActivity {
             return rootView;
         }
     }
-}
+}*/

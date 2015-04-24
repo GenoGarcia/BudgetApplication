@@ -1,4 +1,4 @@
-package com.example.geno.budgetapplication;
+/*package com.example.geno.budgetapplication;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.view.SurfaceView;
 /**
  * Created by Geno on 4/22/2015.
  */
-public class Chart extends ChartSummary  {
+/*public class Chart extends ChartSummary  {
     private int screenWidth;
     private int screenHeight;
 
@@ -36,4 +36,4 @@ public class Chart extends ChartSummary  {
 
 
     }
-}
+}*/

@@ -1,4 +1,4 @@
-package com.example.geno.budgetapplication;
+/*package com.example.geno.budgetapplication;
 
 import android.app.Activity;
 import android.net.Uri;
@@ -17,7 +17,7 @@ import android.view.ViewGroup;
  * Use the {@link ListSummaryFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ListSummaryFragment extends Fragment {
+/*public class ListSummaryFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -38,7 +38,7 @@ public class ListSummaryFragment extends Fragment {
      * @return A new instance of fragment ListSummaryFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ListSummaryFragment newInstance(String param1, String param2) {
+  /*  public static ListSummaryFragment newInstance(String param1, String param2) {
         ListSummaryFragment fragment = new ListSummaryFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
@@ -101,9 +101,8 @@ public class ListSummaryFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnFragmentInteractionListener {
+    /*public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);
     }
-
-}
+}*/
